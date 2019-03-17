@@ -1,7 +1,6 @@
 <?php
 
 
-
 // PageGen instantiation
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/Phplib/PageGen/Bootstrap4/Superhero.php");
 
@@ -9,13 +8,14 @@ $page = new Superhero(array(
     title => 'Random Boo-er',
     favicon => file_get_contents('favicon/favicon.include'),
     css => array(
-        'booer.css'
+        'booer.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css',
     ), // Should do filectime internally
     js => array(
-        'booer.js'
+        'booer.js',
+       
     ),
     additional_head => '
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
 ',
     additional_footer => '
