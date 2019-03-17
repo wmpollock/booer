@@ -8,7 +8,6 @@ function playRandomBoo() {
   message("Last played: " + $($boo).attr('src'))
   $boo.play();
   console.log(i);
-//  console.log($boo);
 }
 
 $("document").ready(function() {
@@ -22,7 +21,7 @@ $("document").ready(function() {
   $slider = $(".ambientboo input.slider").slider({
     // Tooltip apparently clashes with 4.0 ? :|
     tooltip: 'never',
-    //    tooltip_split: true, 
+    // tooltip_split: true,
     min: 10,
     max: 300,
     range: true, // FER YEAH, BUT WHERE'S MY KLASSES?!?
@@ -32,15 +31,9 @@ $("document").ready(function() {
     var vals = $(".ambientboo input.slider").val().split(',');
     $(".ambientboo label.min").text(fmtCountdown(vals[0]));
     $(".ambientboo label.max").text(fmtCountdown(vals[1]));
-
-    //$(".ambientboo label.min").text(vals[0] + " seconds");
-//    $(".ambientboo label.max").text(vals[1] + " seconds");
-
-
-    console.log("hello! Don't go changing!")}).change();
-
-
 });
+  
+  
 function startAmbientBoo() {
   console.log("AMBIENT BOO.  YIKLES!!");
   randomAmbientWait();
@@ -52,9 +45,7 @@ function randomAmbientWait() {
   nextInterval = parseInt(vals[0]) + Math.round(Math.random() * range),
   now = new Date(),
   then = new Date(nextInterval * 1000 + now.getTime());;
-//  if(play) {
-    playRandomBoo();
-//  }
+  playRandomBoo();
 
   ambientMessage("Next boo will execute at " + then.toTimeString() + ".");
   ambientCountDown(nextInterval);
@@ -109,7 +100,6 @@ function message(msg) {
 function clearTimers() {
   clearTimeout(ambientCountdownTimer);
   clearTimeout(ambientTimer);
-
 }
 
 
