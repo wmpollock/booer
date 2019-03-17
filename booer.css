@@ -1,0 +1,23 @@
+.slider-handle {
+  width: 30px;
+color: #5bc0de;
+}
+.slider.slider-horizontal {
+  width: 100%;
+}
+
+.slider-selection {
+  background: green;
+}
+.container .card {
+  margin-bottom: 2rem;
+}
+.hidden {
+  display: none;
+}
+.smallLabel, .ambientboo label {
+  font-size: .6rem;
+}
+h2 {
+  border-bottom: 1px solid white;
+}
